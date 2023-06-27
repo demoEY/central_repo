@@ -1,4 +1,4 @@
-name: 080-resusable-workflow-caller
+name: invoke_workflow.yaml
 
 on:
   push:
@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: none # [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
