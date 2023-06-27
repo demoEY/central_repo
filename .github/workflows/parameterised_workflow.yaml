@@ -1,0 +1,25 @@
+name: Parameterized Hello World
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set input parameters
+        id: input_params
+        run: |
+          echo "::set-output name=message::${{ github.event.inputs.message }}"
+          echo "::set-output name=recipient::${{ github.event.inputs.recipient }}"
+
+      - name: Say Hello
+        run: |
+          echo "Hello, ${{ steps.input_params.outputs.recipient }}!"
+          echo "Message: ${{ steps.input_params.outputs.message }}"
