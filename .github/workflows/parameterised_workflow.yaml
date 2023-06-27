@@ -1,6 +1,8 @@
-name: Parameterized Hello World
+name: parameterised_workflow.yaml
+
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
