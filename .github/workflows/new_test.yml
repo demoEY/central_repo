@@ -26,4 +26,4 @@ jobs:
       
     - name: install dependencies
       run: |
-            echo ${{inputs.project_name}}
+            echo ${{project_name}}
