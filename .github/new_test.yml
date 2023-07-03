@@ -1,0 +1,29 @@
+name: ADB-CI-CD
+
+
+# Manual trigger with parameters
+on:
+  workflow_dispatch:
+  workflow_call:
+  inputs:
+    project_name:
+      required: true
+      type: string
+  secrets:
+    DATABRICKS_HOST:
+      required: true
+      type: string
+    DATABRICKS_TOKEN:
+      required: true
+      type: string
+  
+jobs: 
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo Code
+      uses: actions/checkout@v3
+      
+    - name: install dependencies
+      run: |
+            echo ${{inputs.project_name}}
