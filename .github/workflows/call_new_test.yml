@@ -13,5 +13,4 @@ jobs:
     uses: ./.github/workflows/new_test.yml
     with:
       project_name: ADB-DE-MFG
-    secrets:
-      token: ${{ secrets.TOKEN }}
+
