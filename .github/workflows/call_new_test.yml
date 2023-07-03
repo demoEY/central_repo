@@ -1,0 +1,17 @@
+name: invoke_workflow.yaml
+
+on:
+  push:
+    branches: none # [ main ]
+  pull_request:
+    branches: none # [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  call-workflow-A:
+    uses: ./.github/workflows/new_test.yml
+    with:
+      project_name: ADB-DE-MFG
+    secrets:
+      token: ${{ secrets.TOKEN }}
