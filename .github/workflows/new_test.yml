@@ -9,14 +9,7 @@ on:
     project_name:
       required: true
       type: string
-  secrets:
-    DATABRICKS_HOST:
-      required: true
-      type: string
-    DATABRICKS_TOKEN:
-      required: true
-      type: string
-  
+
 jobs: 
   Build:
     runs-on: ubuntu-latest
