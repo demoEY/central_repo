@@ -1,4 +1,4 @@
-name: invoke_workflow.yaml
+name: invoke_new_test.yml
 
 on:
   push:
