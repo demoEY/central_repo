@@ -19,4 +19,4 @@ jobs:
       
     - name: install dependencies
       run: |
-            echo ${{project_name}}
+            echo ${{ inputs.project_name }}
